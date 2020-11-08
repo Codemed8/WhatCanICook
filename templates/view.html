@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+        <button onclick="goBack()">Go Back</button>
+        <br>
+        {% for site in values %}
+            <div class="card h-100">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a href={{site}}>{{site}}</a>
+                    </h4>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
+
+<script>
+    function goBack() {
+      window.history.back();
+    }
+</script>
+
+{% endblock %}

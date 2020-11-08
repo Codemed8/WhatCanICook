@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <div class="row">
+                <h1>Select Your Ingredients: </h1>
+            </div>
+            <br>
+            <div class="row">
+                <h1>ITEMS</h1>
+            </div>
+            <form method="POST">
+                <div class="row">
+                    <h2>Dairy Foods</h2></div>
+                    <div class="row">
+                    {% for ingred,lst in ingredAndImage.items() %}
+                        {% if lst[1] == 'dairy foods' %}
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <a href="#"><img class="card-img-top" src={{lst[0]}} alt=""></a>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="#">{{ingred}}</a>
+                                        </h4>
+                                        <input type="checkbox" id={{ingred}} name="item" value="{{ingred}}">
+                                        <label for={{ingred}}>{{ingred}}</label><br>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="row">
+                    <h2>Fruits</h2></div>
+                    <div class="row">
+                    {% for ingred,lst in ingredAndImage.items() %}
+                        {% if lst[1] == 'fruits' %}
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <a href="#"><img class="card-img-top" src={{lst[0]}} alt=""></a>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="#">{{ingred}}</a>
+                                        </h4>
+                                           <input type="checkbox" id={{ingred}} name="item" value="{{ingred}}">
+                                        <label for={{ingred}}>{{ingred}}</label><br>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="row">
+                    <h2>Fish and Seafood</h2></div>
+                    <div class="row">
+                    {% for ingred,lst in ingredAndImage.items() %}
+                        {% if lst[1] == 'fish and seafood' %}
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <a href="#"><img class="card-img-top" src={{lst[0]}} alt=""></a>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="#">{{ingred}}</a>
+                                        </h4>
+                                           <input type="checkbox" id={{ingred}} name="item" value="{{ingred}}">
+                                        <label for={{ingred}}>{{ingred}}</label><br>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="row">
+                    <h2>Grains,Beans and Nuts</h2></div>
+                    <div class="row">
+                    {% for ingred,lst in ingredAndImage.items() %}
+                        {% if lst[1] == 'grains,beans and nuts' %}
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <a href="#"><img class="card-img-top" src={{lst[0]}} alt=""></a>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="#">{{ingred}}</a>
+                                        </h4>
+                                           <input type="checkbox" id={{ingred}} name="item" value="{{ingred}}">
+                                        <label for={{ingred}}>{{ingred}}</label><br>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="row">
+                    <h2>Meat and Poultry</h2></div>
+                    <div class="row">
+                    {% for ingred,lst in ingredAndImage.items() %}
+                        {% if lst[1] == 'meat and poultry' %}
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <a href="#"><img class="card-img-top" src={{lst[0]}} alt=""></a>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="#">{{ingred}}</a>
+                                        </h4>
+                                           <input type="checkbox" id={{ingred}} name="item" value="{{ingred}}">
+                                        <label for={{ingred}}>{{ingred}}</label><br>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="row">
+                    <h2>vegtables</h2></div>
+                    <div class="row">
+                    {% for ingred,lst in ingredAndImage.items() %}
+                        {% if lst[1] == 'vegtables' %}
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <a href="#"><img class="card-img-top" src={{lst[0]}} alt=""></a>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="#">{{ingred}}</a>
+                                        </h4>
+                                           <input type="checkbox" id={{ingred}} name="item" value="{{ingred}}">
+                                        <label for={{ingred}}>{{ingred}}</label><br>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <input type="submit" value="Submit"></form>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}
